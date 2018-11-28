@@ -1,4 +1,7 @@
 *.ovpn
 *.tfstate
 *.tfplan
+*.tfvars
 *.backup
+.terraform
+

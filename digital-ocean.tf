@@ -42,6 +42,13 @@ resource "digitalocean_droplet" "hack-the-box" {
 			# install tmux and vim
 			"sudo apt-get -y install tmux vim",
 			"sudo apt-get -y install nmap",
+			"sudo apt-get -y install golang",
+			"echo 'export GOPATH=$HOME/go'",
+			"mkdir $HOME/go ",
+			"sudo apt-get -y install git",
+			"git clone https://github.com/OJ/gobuster.git",
+			"cd gobuster",
+			"go get && go build && go install",
 			"tmux new-session -d -s htb",
 			"tmux send-keys openvpn Space ${var.ovpn_file} C-m"
 		]

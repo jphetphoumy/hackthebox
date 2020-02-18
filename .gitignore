@@ -4,4 +4,3 @@
 *.tfvars
 *.backup
 .terraform
-
